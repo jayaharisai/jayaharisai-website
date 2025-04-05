@@ -24,7 +24,10 @@ body{
     gap: 20px;
     cursor: pointer;
 }
-
+.menu ul li a{
+    color: black;
+    text-decoration: none;
+}
 .section2{
     margin: auto;
     padding: 100px 0px;
@@ -121,8 +124,12 @@ body{
 
 .all_feature ul {
     display: flex;
-    animation: scroll-left 30s linear infinite;
+    animation: scroll-left 20s linear infinite;
     width: max-content;
+}
+
+.all_feature ul li{
+    cursor: pointer;
 }
 
 .all_feature ul:hover {
@@ -137,3 +144,30 @@ body{
         transform: translateX(-50%);
     }
 }
+
+
+@keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .all_feature ul li {
+    animation: slideUp 0.6s ease-out forwards;
+    opacity: 0;
+  }
+  
+  /* Animate each li one-by-one using nth-child delay */
+  .all_feature ul li:nth-child(1) { animation-delay: 0.1s; }
+  .all_feature ul li:nth-child(2) { animation-delay: 0.3s; }
+  .all_feature ul li:nth-child(3) { animation-delay: 0.5s; }
+  .all_feature ul li:nth-child(4) { animation-delay: 0.7s; }
+  .all_feature ul li:nth-child(5) { animation-delay: 0.9s; }
+  .all_feature ul li:nth-child(6) { animation-delay: 1.1s; }
+  .all_feature ul li:nth-child(7) { animation-delay: 1.3s; }
+  
