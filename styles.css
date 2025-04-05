@@ -120,6 +120,7 @@ body{
 }
 
 .all_feature ul {
+    display: flex;
     animation: scroll-left 30s linear infinite;
     width: max-content;
 }
@@ -133,6 +134,6 @@ body{
         transform: translateX(0);
     }
     100% {
-        transform: translateX(-100%);
+        transform: translateX(-50%);
     }
 }
