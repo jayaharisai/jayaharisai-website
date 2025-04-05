@@ -39,35 +39,6 @@ body{
     border-radius: 60px 700px 140px 200px;
 }
 
-.section2::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 60px 700px 140px 200px;
-    backdrop-filter: blur(100px);
-    animation: blurFade 3s ease-out forwards;
-    z-index: 0;
-}
-
-/* Ensure content appears above blur layer */
-.section2 > .container {
-    position: relative;
-    z-index: 1;
-}
-
-@keyframes blurFade {
-    0% {
-        backdrop-filter: blur(20px);
-        opacity: 1;
-    }
-    100% {
-        backdrop-filter: blur(0px);
-        opacity: 0;
-    }
-}
 
 
 .container{
@@ -131,7 +102,7 @@ body{
 }
 .card-title{
     font-size: 24px;
-    font-weight: 500;
+    font-weight: 200;
 }
 
 .discription{
@@ -178,27 +149,68 @@ body{
 
 
 @keyframes slideUp {
+from {
+    opacity: 0;
+    transform: translateY(30px);
+}
+to {
+    opacity: 1;
+    transform: translateY(0);
+}
+}
+
+.all_feature ul li {
+animation: slideUp 0.6s ease-out forwards;
+opacity: 0;
+}
+
+/* Animate each li one-by-one using nth-child delay */
+.all_feature ul li:nth-child(1) { animation-delay: 0.1s; }
+.all_feature ul li:nth-child(2) { animation-delay: 0.3s; }
+.all_feature ul li:nth-child(3) { animation-delay: 0.5s; }
+.all_feature ul li:nth-child(4) { animation-delay: 0.7s; }
+.all_feature ul li:nth-child(5) { animation-delay: 0.9s; }
+.all_feature ul li:nth-child(6) { animation-delay: 1.1s; }
+.all_feature ul li:nth-child(7) { animation-delay: 1.3s; }
+
+
+.about-location {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 80px 5%;
+    animation: fadeInUp 1.5s ease-out;
+}
+
+.about-text {
+    flex: 1;
+    font-family: 'Poppins', sans-serif;
+}
+
+.about-map {
+    flex: 1;
+    animation: slideInMap 2s ease forwards;
+    opacity: 0;
+}
+
+@keyframes slideInMap {
     from {
-      opacity: 0;
-      transform: translateY(30px);
+        transform: translateX(100px);
+        opacity: 0;
     }
     to {
-      opacity: 1;
-      transform: translateY(0);
+        transform: translateX(0);
+        opacity: 1;
     }
-  }
-  
-  .all_feature ul li {
-    animation: slideUp 0.6s ease-out forwards;
-    opacity: 0;
-  }
-  
-  /* Animate each li one-by-one using nth-child delay */
-  .all_feature ul li:nth-child(1) { animation-delay: 0.1s; }
-  .all_feature ul li:nth-child(2) { animation-delay: 0.3s; }
-  .all_feature ul li:nth-child(3) { animation-delay: 0.5s; }
-  .all_feature ul li:nth-child(4) { animation-delay: 0.7s; }
-  .all_feature ul li:nth-child(5) { animation-delay: 0.9s; }
-  .all_feature ul li:nth-child(6) { animation-delay: 1.1s; }
-  .all_feature ul li:nth-child(7) { animation-delay: 1.3s; }
-  
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
