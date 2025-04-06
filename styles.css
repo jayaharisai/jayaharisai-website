@@ -10,6 +10,10 @@ body{
     font-weight: 500;
 }
 
+.link{
+    text-decoration: none;
+}
+
 .navbar{
     display: flex;
     align-items: center;
@@ -122,6 +126,7 @@ body{
 .card-title{
     font-size: 24px;
     font-weight: 200;
+    color: black;
 }
 
 .discription{
