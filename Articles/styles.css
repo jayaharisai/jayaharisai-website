@@ -34,3 +34,25 @@
 .container_{
     margin-top: 50px;
 }
+
+@media (max-width: 1200px) {
+    .blog {
+        width: 80%;
+    }
+
+    .arti{
+        width: 80%;
+        margin: auto;
+    }
+  }
+
+@media (max-width: 1000px) {
+    .blog {
+        width: 90%;
+    }
+
+    .arti{
+        width: 90%;
+        margin: auto;
+    }
+  }

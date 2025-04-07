@@ -436,6 +436,9 @@ opacity: 0;
     
 }
 
+
+
+
 .allarticles ul li{
     width: 300px;
     transition: 200ms;
@@ -521,3 +524,47 @@ opacity: 0;
     font-family: "Poppins", sans-serif;
     font-size: 15px;
 }
+
+
+@media (max-width: 1000px) {
+    .allarticles ul{
+        display: flex;
+        justify-content: center;
+    }
+
+    .card-container{
+        display: none;
+    }
+
+    .images img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        /* border-radius: 5px; */
+    }
+
+    .new-blogs{
+        display: none;
+    }
+
+    .prime-button button{
+        width: 30%;
+    }
+
+    .about-location{
+        display: block;
+    }
+    .about-map{
+        margin-top: 80px;
+    }
+
+    .skills ul li img{
+        width: 40px;
+    }
+    .skills ul li{
+        column-gap: 20px;
+    }
+    .skills{
+        margin-top: 50px;
+    }
+  }
